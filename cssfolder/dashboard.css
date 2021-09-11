@@ -1,0 +1,300 @@
+/* SA DETAILSFORM .PHP NAKO MAG DEDISIGN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-1: #3498db;
+  --bg-1s: #5dade2;
+  --bg-2: #e74c3c;
+  --bg-2s: #ec7063;
+  --bg-3: #1abc9c;
+  --bg-3s: #58d68d;
+  --bg-4: #2c3e50;
+  --bg-5: #fbfcfc;
+}
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.sidebar {
+  background-color: var(--bg-4);
+}
+.sidebar button {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  margin-top: 20px;
+}
+.sidebar button:hover {
+  background-color: rgb(197, 197, 197);
+}
+.sidebar button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--bg-4);
+}
+.contentbar {
+  flex-grow: 1;
+}
+/*FOR ADMIN DASHBOARD */
+/* ==START NOTIF== */
+
+.admin-content-con {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 1%;
+}
+.admin-content-con .notif-con {
+  background-color: var(--bg-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 2%;
+  color: var(--bg-5);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.admin-content-con .notif-con .notif {
+  text-align: center;
+  padding: 10% 20%;
+  height: 100%;
+}
+.admin-content-con .notif-con .notif.orders {
+  background-color: var(--bg-1);
+}
+.admin-content-con .notif-con .notif.pending {
+  background-color: var(--bg-2);
+}
+.admin-content-con .notif-con .notif.income {
+  background-color: var(--bg-3);
+}
+
+.admin-content-con .notif-con .notif-count {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+/* ==END NOTIF== */
+/* ==ORDER INFO== */
+
+.order-info {
+  height: 100%;
+}
+#admin-main {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+#admin-main th,
+#admin-main td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#admin-main th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: var(--bg-4);
+  color: var(--bg-5);
+  text-transform: uppercase;
+}
+#admin-main tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#admin-main tr:hover {
+  background-color: #ddd;
+}
+#admin-main .btn-admin {
+  width: 100%;
+  border-radius: 25px;
+  border: 0.5px solid var(--bg-4);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 2%;
+  font-weight: bold;
+  color: white;
+}
+#admin-main .done {
+  background-color: var(--bg-1);
+}
+#admin-main .done:hover {
+  background-color: var(--bg-1s);
+  color: var(--bg-4);
+}
+#admin-main .cancel {
+  background-color: var(--bg-2);
+}
+#admin-main .cancel:hover {
+  background-color: var(--bg-2s);
+  color: var(--bg-4);
+}
+
+/* ==END INFO== */
+
+/* ==START ADD.PHP== */
+
+.add-contentbar h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+.add-container {
+  padding: 5%;
+  min-height: 40%;
+  margin: 0 30%;
+  background-color: var(--bg-3);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.add-container label {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+.add-container input {
+  width: 100%;
+  border-radius: 4px;
+  height: 2rem;
+  margin: 2% 0;
+  outline: none;
+  font-size: 1rem;
+}
+.add-container input:hover {
+  border-bottom: 4px solid var(--bg-2);
+}
+.add-container .btnadd {
+  background-color: var(--bg-4);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.add-container .btnadd:hover {
+  background-color: var(--bg-5);
+  color: var(--bg-4);
+}
+/* ==END ADD.PHP== */
+
+/* ==START VIEW.PHP== */
+.view-container {
+  border: 1px solid black;
+  height: 100%;
+}
+#view-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+#view-table td,
+#view-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#view-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#view-table tr:hover {
+  background-color: #ddd;
+}
+
+#view-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--bg-4);
+  color: white;
+}
+.view-contentbar .btn-view {
+  width: 100%;
+  border-radius: 25px;
+  border: 0.5px solid var(--bg-4);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 2%;
+  font-weight: bold;
+  color: white;
+}
+.view-contentbar .update:hover {
+  background-color: var(--bg-1s);
+  color: var(--bg-4);
+}
+.view-contentbar .delete:hover {
+  background-color: var(--bg-2s);
+  color: var(--bg-4);
+}
+
+/* ==END VIEW.PHP== */
+
+/* ==START ORDERFORM.PHP== */
+.order-container-main {
+  min-height: 100%;
+  padding: 2% 10%;
+}
+.details-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.details-order-con,
+h3 {
+  text-align: center;
+}
+
+.details-customer-con {
+  text-align: left;
+}
+.details-customer-con input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  height: 2rem;
+}
+.btnOrder {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+.orderProceed {
+  background-color: var(--bg-4);
+  color: var(--bg-5);
+  font-weight: bold;
+}
+.orderProceed:hover {
+  background-color: #c1c1c1;
+  color: var(--bg-4);
+}
+.orderCancel {
+  background-color: var(--bg-2);
+  color: var(--bg-5);
+  font-weight: bold;
+}
+.orderCancel:hover {
+  background-color: #c1c1c1;
+  color: var(--bg-4);
+}
